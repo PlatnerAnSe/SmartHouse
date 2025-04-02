@@ -10,14 +10,13 @@ namespace SmartHouse;
 
 public partial class MainWindow : Window
 {
-    private Room? room; // Делаем поле nullable
+    private Room? room;
     private readonly List<Room> rooms = new();
     
     public MainWindow()
     {
         InitializeComponent();
         
-        // Добавляем начальные комнаты
         rooms.Add(new Room("Кухня", 20));
         rooms.Add(new Room("Гостиная", 22));
         rooms.Add(new Room("Спальня", 21));
@@ -55,7 +54,6 @@ public partial class MainWindow : Window
             room.SetName(nameBox.Text);
             RoomInfo.Text = room.GetRoomInfo();
             
-            // Обновляем список
             RoomsListBox.ItemsSource = null;
             RoomsListBox.ItemsSource = rooms;
         }
