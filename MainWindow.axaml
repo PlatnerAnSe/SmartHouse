@@ -22,5 +22,6 @@
         <TextBox Name="nameBox" TextChanged="nameChange" Height="20" Width="100" VerticalAlignment="Bottom" Margin="0,0,0,150" Watermark="Название комнаты"/>
         <Slider Name="TemperatureSlider" Minimum="15" Maximum="30" ValueChanged="SliderTemperature" Value="20" VerticalAlignment="Bottom" Margin="0,0,0,60" Width="200"/>
         <CheckBox Name="LightBox" Click="CheckBoxLight" IsChecked="True" IsHitTestVisible="True" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,30" Content="Свет"/>
+        <Button Name="AddRoom"/>
     </Grid>
 </Window>
