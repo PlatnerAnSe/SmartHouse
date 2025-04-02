@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace SmartHouse
 {
-    public partial class SecondWindow : Window
+    public partial class AddWindow : Window
     {
-        public SecondWindow()
+        public AddWindow()
         {
             InitializeComponent();
         }
