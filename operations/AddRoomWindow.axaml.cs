@@ -2,13 +2,20 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace SmartHouse
+namespace SmartHouse;
+
+public partial class ADDWindow : Window
 {
-    public partial class AddWindow : Window
+    public ADDWindow()
     {
-        public AddWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+#if DEBUG
+        this.AttachDevTools();
+#endif
+    }
+
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
     }
 }

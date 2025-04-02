@@ -1,8 +1,10 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        x:Class="SmartHouse.AddWindow"
-        Title="Second Window"
+        x:Class="SmartHouse.ADDWindow"
+        Title="Добавление новой комнаты"
         Width="400"
         Height="300">
-    <TextBlock Text="Это второе окно!" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Grid>
+        <TextBox>asd<TextBox/>
+    </Grid>
 </Window>

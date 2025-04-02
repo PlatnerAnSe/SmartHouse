@@ -80,6 +80,12 @@ public partial class MainWindow : Window
             RoomInfo.Text = room.GetRoomInfo();
         }
     }
+
+    private void OpenNewWindow(object sender, RoutedEventArgs e)
+    {
+        var addWindow = new ADDWindow();
+        addWindow.Show();
+    }
 }
 
 public class Room 
