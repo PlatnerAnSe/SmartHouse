@@ -2,25 +2,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartHouse"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="SmartHouse.MainWindow"
         Title="SmartHouse">
         
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <ListBox Name="RoomsListBox" ItemsSource = "{Binding rooms}" SelectionChanged="RoomsListBox_SelectionChanged">
+                <ListBox Name="RoomsListBox" Width="200" Height="100" SelectionChanged="RoomsListBox_SelectionChanged">
                     <ListBox.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate DataType="local:Room">
                             <TextBlock Text="{Binding Name}"/>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
               
-                <TextBlock Name="RoomInfo" />
+                <TextBlock Name="RoomInfo" Margin="0,20" TextWrapping="Wrap" Width="200"/>
         </StackPanel>
-        <TextBox Name="nameBox" TextChanged="nameChange" Height="20" Width="100" VerticalAlignment="Bottom" Margin="0,0,0,150"/>
-        <Slider Name="TemperatureSlider" Minimum="15" Maximum="30" ValueChanged="SliderTemperature" Value="20" VerticalAlignment="Bottom" Margin="0,0,0,60"/>
-        <CheckBox Name="LightBox" Click="CheckBoxLight" IsChecked="True" IsHitTestVisible="True" VerticalAlignment="Bottom"  HorizontalAlignment="Center"/>
-        
+        <TextBox Name="nameBox" TextChanged="nameChange" Height="20" Width="100" VerticalAlignment="Bottom" Margin="0,0,0,150" Watermark="Название комнаты"/>
+        <Slider Name="TemperatureSlider" Minimum="15" Maximum="30" ValueChanged="SliderTemperature" Value="20" VerticalAlignment="Bottom" Margin="0,0,0,60" Width="200"/>
+        <CheckBox Name="LightBox" Click="CheckBoxLight" IsChecked="True" IsHitTestVisible="True" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,30" Content="Свет"/>
     </Grid>
 </Window>
